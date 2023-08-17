@@ -16,6 +16,6 @@ public class SupportService {
 
 
     public boolean createSupport(Support support) {
-
+        return false;
     }
 }

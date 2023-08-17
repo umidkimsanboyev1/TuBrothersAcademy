@@ -3,21 +3,17 @@ package uz.master.demotest.configs.security;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import uz.master.demotest.entity.auth.AuthRole;
 import uz.master.demotest.entity.auth.AuthUser;
 import uz.master.demotest.enums.Role;
 
 import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 
 @Getter
 public class UserDetails implements org.springframework.security.core.userdetails.UserDetails {
 
-    private Long id;
+    private UUID id;
 
     private String username;
 
@@ -45,9 +41,6 @@ public class UserDetails implements org.springframework.security.core.userdetail
         this.active = user.isActive();
         this.blocked = user.isBlocked();
         this.fullName=user.getFullName();
-        this.testId = user.getTestId();
-        this.quesNumber = user.getQuesNumber();
-        this.time = user.getTime();
         processAuthorities(user);
     }
 

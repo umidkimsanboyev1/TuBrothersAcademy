@@ -3,9 +3,6 @@ package uz.master.demotest.services.student;
 import org.springframework.stereotype.Service;
 import uz.master.demotest.entity.auth.AuthUser;
 import uz.master.demotest.entity.test.Test;
-import uz.master.demotest.repositories.AuthUserRepository;
-import uz.master.demotest.repositories.OverAllResultRepository;
-import uz.master.demotest.repositories.TestRepository;
 import uz.master.demotest.utils.SessionUser;
 
 import java.util.ArrayList;

@@ -3,9 +3,6 @@ package uz.master.demotest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import uz.master.demotest.repositories.AuthRoleRepository;
-import uz.master.demotest.repositories.AuthUserRepository;
-import uz.master.demotest.repositories.QuestionRepository;
 
 //@EnableJpaAuditing
 @SpringBootApplication

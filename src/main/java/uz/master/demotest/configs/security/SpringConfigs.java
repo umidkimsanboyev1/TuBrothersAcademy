@@ -64,7 +64,7 @@ public class SpringConfigs extends WebSecurityConfigurerAdapter {
                         .defaultSuccessUrl("/", true)
                 )
                 .rememberMe(httpSecurityRememberMeConfigurer -> httpSecurityRememberMeConfigurer
-                        .key("gsbetest")
+                        .key("TuBrothersAcademy")
                         .rememberMeParameter("remember-me")
                         .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(10))
                 ).logout(httpSecurityLogoutConfigurer -> httpSecurityLogoutConfigurer

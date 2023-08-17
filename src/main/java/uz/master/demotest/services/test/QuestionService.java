@@ -6,10 +6,6 @@ import uz.master.demotest.entity.auth.AuthUser;
 import uz.master.demotest.entity.test.SendQuestion;
 import uz.master.demotest.entity.test.Question;
 import uz.master.demotest.entity.test.Test;
-import uz.master.demotest.repositories.AuthUserRepository;
-import uz.master.demotest.repositories.QuestionRepository;
-import uz.master.demotest.repositories.SendQuestionRepository;
-import uz.master.demotest.repositories.TestRepository;
 import uz.master.demotest.utils.SessionUser;
 
 import java.time.LocalDateTime;

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-import uz.master.demotest.repositories.UploadsRepository;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;

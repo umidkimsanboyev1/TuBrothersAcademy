@@ -13,6 +13,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 
 @Getter
@@ -21,13 +22,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class Auditable implements BaseEntity, Serializable {
+public abstract class Auditable implements Serializable {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    protected Long id;
+    protected UUID id;
 
     @CreatedDate
     @CreationTimestamp
@@ -41,12 +42,6 @@ public abstract class Auditable implements BaseEntity, Serializable {
     @Column(name = "is_deleted",columnDefinition = "boolean default false")
     private boolean deleted;
 
-    public boolean isDeleted() {
-        return deleted;
-    }
 
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
-    }
 
 }

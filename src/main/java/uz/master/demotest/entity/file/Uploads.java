@@ -1,4 +1,4 @@
-package uz.master.demotest.entity.action;
+package uz.master.demotest.entity.file;
 
 import lombok.Builder;
 import lombok.Getter;

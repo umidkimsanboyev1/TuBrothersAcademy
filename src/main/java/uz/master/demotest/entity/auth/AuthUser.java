@@ -3,15 +3,12 @@ package uz.master.demotest.entity.auth;
 
 import lombok.*;
 import uz.master.demotest.entity.Auditable;
-import uz.master.demotest.entity.Groups;
 import uz.master.demotest.enums.Role;
-import uz.master.demotest.enums.TypeEducation;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -25,30 +22,20 @@ public class AuthUser extends Auditable {
     @Column(unique = true, nullable = false)
     private String username;
 
+    @Column(unique = true, nullable = false)
+    private String email;
+
     @Column(nullable = false)
     private String password;
 
-    private Role role;
-    private TypeEducation typeEducation;
-
     private String fullName;
+    private String avatarImagePath;
+    private Role role;
+    private UUID activationKey;
 
-    private String groupName;
-
-    private String selectedGroup;
-
-    private Long testId;
-    private Long viewedTestId;
-
-    private Integer QuesNumber;
-
-    @Column(columnDefinition = "0")
-    private Integer tryingCount;
-    private LocalDateTime time;
-
+    private boolean darkTheme;
+    private boolean registered;
     private boolean active;
-
     private boolean blocked;
-
 
 }

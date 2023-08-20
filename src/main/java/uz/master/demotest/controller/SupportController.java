@@ -15,18 +15,21 @@ public class SupportController {
         this.supportService = supportService;
     }
 
-    @GetMapping(value = "supportForm")
+    @GetMapping(value = "/supportForm")
     public String getSupportFormPage(){
-
-        return null;
+        return "/auth/support";
     }
 
-    @PostMapping("sendSupport")
+    @PostMapping("/sendSupport")
     public String support(@ModelAttribute Support support){
         boolean done = supportService.createSupport(support);
         if(done){
             return null;
         } else return "";
     }
+
+
+
+
 
 }

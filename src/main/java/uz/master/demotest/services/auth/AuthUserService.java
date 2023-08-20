@@ -22,7 +22,7 @@ public class AuthUserService {
 
 
     public AuthUser getSessionUser() {
-        return authUserRepository.findById(sessionUser.getId()).get();
+        return authUserRepository.findAuthUserById(sessionUser.getId());
     }
 
     public boolean changeAuthUserPassword(changePasswordDTO changePasswordDTO) {

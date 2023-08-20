@@ -19,7 +19,7 @@ public class Comments extends Auditable {
     private String position;
     private String imagePath;
     private String title;
-    private int order;
+    private int orderNumber;
     private boolean active;
 
 

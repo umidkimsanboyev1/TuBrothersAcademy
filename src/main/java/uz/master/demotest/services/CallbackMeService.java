@@ -14,6 +14,7 @@ public class CallbackMeService {
     }
 
     public boolean saveCallBackMe(Callback callback){
+        callback.setResolved(false);
         repository.save(callback);
         return true;
     }

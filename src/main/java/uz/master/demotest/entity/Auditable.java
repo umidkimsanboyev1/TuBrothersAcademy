@@ -28,7 +28,7 @@ public abstract class Auditable implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    protected UUID id;
+    protected Long id;
 
     @CreatedDate
     @CreationTimestamp

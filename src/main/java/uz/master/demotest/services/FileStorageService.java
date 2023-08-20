@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
+import uz.master.demotest.entity.file.Uploads;
+import uz.master.demotest.repositories.UploadsRepository;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -45,7 +47,7 @@ public class FileStorageService {
         String generatedName = "%s.%s".formatted(System.currentTimeMillis(), extension);
         Path rootPath = Paths.get(filePath, generatedName);
         Files.copy(file.getInputStream(), rootPath, StandardCopyOption.REPLACE_EXISTING);
-        uz.master.demotest.entity.action.Uploads uploadedFile = new uz.master.demotest.entity.action.Uploads(originalFilename,generatedName,file.getContentType(),(filePath + generatedName),file.getSize());
+        Uploads uploadedFile = new Uploads(originalFilename,generatedName,file.getContentType(),(filePath + generatedName),file.getSize());
         repository.save(uploadedFile);
         return generatedName;
     }

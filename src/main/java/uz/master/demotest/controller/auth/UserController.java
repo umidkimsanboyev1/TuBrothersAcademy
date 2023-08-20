@@ -23,7 +23,7 @@ public class UserController {
         this.service = service;
     }
 
-    @GetMapping(value = "profile")
+    @GetMapping(value = "/profile")
     public String getProfilePage(Model model){
         AuthUser session = service.getSessionUser();
         model.addAttribute("user", session);

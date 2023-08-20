@@ -14,8 +14,8 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class Lesson  extends Auditable {
 
-    private String duration;
     private Long courseId;
+    private String duration;
     private String pathOfVideo;
     private String name;
     private String description;

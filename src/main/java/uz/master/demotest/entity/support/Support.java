@@ -5,6 +5,7 @@ import uz.master.demotest.entity.Auditable;
 import uz.master.demotest.enums.SupportStatus;
 
 import javax.persistence.Entity;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -16,10 +17,12 @@ import javax.persistence.Entity;
 public class Support extends Auditable {
 
     private String senderName;
+    private String text;
+    private String senderEmailAddress;
+    private String seenDateTime;
+    private String closedDateTime;
+    private SupportStatus status;
     private Long senderId;
     private Long moderatorId;
-    private String senderEmailAddress;
-    private String text;
-    private SupportStatus status;
 
 }

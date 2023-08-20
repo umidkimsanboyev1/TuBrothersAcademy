@@ -10,6 +10,7 @@ public enum HelperTextType {
     LEARNEDINLESSON,
     LEARNEDINCOURSE,
     HOMEWORK,
-    REQUARMENTS
+    REQUARMENTS,
+    ADVANTAGES
 
 }

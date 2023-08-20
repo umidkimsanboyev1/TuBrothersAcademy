@@ -17,10 +17,14 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import static uz.master.demotest.configs.security.WhiteListURL.WHITE_LIST;
+import static uz.master.demotest.configs.security.WhiteListURL.WHITE_LIST_RESOURCES;
 
 @Configuration
 @EnableWebSecurity
@@ -38,12 +42,9 @@ public class SpringConfigs extends WebSecurityConfigurerAdapter {
         this.encoder = encoder;
         this.service = service;
     }
-    public static final String[] WHITE_LIST = {
-             "/auth/login","/auth/forgot","/auth/reset/**", "/index/index"
-    };
-    public static final String[] WHITE_LIST_RESOURCES = {
-            "/css/**", "/webjars/**", "/js/**","/error", "/images/**"
-    };
+
+
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
